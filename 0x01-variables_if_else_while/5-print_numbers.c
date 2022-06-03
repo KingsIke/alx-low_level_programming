@@ -1,19 +1,18 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
- *Description: main - Prints out a string to stdout.
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
- 
 int main(void)
 {
-int n;
-while (n < 10)
-{
-printf("%d", n);
-n += 1;
-}
-printf("\n");
-return (0);
+	int i;
+
+	for (i = 0; i < 10; i++)
+		printf("%d", i);
+		printf("\n");
+
+	return (0);
 }
