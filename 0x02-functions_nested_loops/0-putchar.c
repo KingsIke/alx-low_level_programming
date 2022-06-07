@@ -11,7 +11,7 @@
 int main(void)
 {
 	int n = 0;
-	char str[8] = "Kingsikem";
+	char str[9] = "Kingsikem";
 
 	while (n < 8)
 	{
