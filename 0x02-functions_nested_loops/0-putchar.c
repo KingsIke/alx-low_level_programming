@@ -1,21 +1,23 @@
-#include"main.h"
+#include "main.h"
 
 /**
  * main - Entry point
  *
- * Description: prints Kingsike using putchar prototype
+ * Description: prints _putchar using putchar prototype
  *
  * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-	char str[] = "Kingsike";
-	int ch;
+	int n = 0;
+	char str[8] = "Kingsike";
 
-	for (ch = 0; ch < 8; ++ch)
-		Kingsike(str[ch]);
-	Kingsike('\n');
-
+	while (n < 8)
+	{
+		_putchar(str[n]);
+		n += 1;
+	}
+	_putchar('\n');
 	return (0);
 }
