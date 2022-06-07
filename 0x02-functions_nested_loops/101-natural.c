@@ -15,7 +15,7 @@ int main ( void ) {
 
     long int x,total = 0;
 
-for(x = 0; x < 1000; ++x)
+for(x = 0; x < 1024; ++x)
 {
     if(x % 3 == 0)
         total = total + x;
