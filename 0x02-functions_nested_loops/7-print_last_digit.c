@@ -5,21 +5,19 @@
  *
  * @n: takes number input
  *
- * Return: of lastDigit
- 
+ * Return: lastDigit
 */
 
-int print_last_digit(int nld)
+int print_last_digit(int n)
 {
-	int pld;
+	int lastDigit;
 
-	pld = (nld % 10);
+	if (n < 0)
+		lastDigit = -1 * (n % 10);
+	else
+		lastDigit = n % 10;
 
-	if (pld < 0)
-	{
-		pld = (-1 * pld);
-	}
-
-	_putchar(pld + '0');
-	return (pld);
+	_putchar(lastDigit + '0');
+	return (lastDigit);
 }
+
