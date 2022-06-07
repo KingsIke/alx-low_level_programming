@@ -10,14 +10,14 @@
 
 int main(void)
 {
-	int n = 0;
-	char str[9] = "Kingsikem";
+    char boy = "KingsIke";
 
-	while (n < 8)
+	while (boy)
 	{
-		_putchar(str[n]);
-		n += 1;
+		_putchar(boy);
+		boy++;
 	}
 	_putchar('\n');
+
 	return (0);
 }
