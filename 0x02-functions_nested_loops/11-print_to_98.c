@@ -9,35 +9,29 @@
  * @n: input
 */
 
-void print_to_98(int n)
+void printNos(unsigned int n)
 {
-	if (n < 98)
-	{
-		while (n <= 98)
-		{
-			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
-			n++;
-		}
-	}
-	else if (n > 98)
-	{
-		while (n >= 98)
-		{
-			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
-			n--;
-		}
-	}
-	else
-	{
-		printf("98");
-	}
-	printf("\n");
+
+    if(n > 0)
+
+    {
+
+        printNos(n - 1);
+
+        printf("%d ", n);
+
+    }
+
+    return;
+}
+ 
+
+int main()
+{
+
+    printNos(100);
+
+    getchar();
+
+    return 0;
 }
