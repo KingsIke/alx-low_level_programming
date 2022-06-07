@@ -11,20 +11,18 @@
  * Return: Always 0 (Success)
 */
 
-int main()
-{
-    int sum;
-    int i;
-    sum=0;
-       for(i=0;i<1024;++i)
- {
-      if((i%3==0)||(i%5==0))
-     {
-       sum=sum+i;
-     }
- }
+int main ( void ) {
 
-   printf("%d",sum);
+    int sum = 0;
 
+    for (int i = 0; i < 1024; i += 5) {
+        sum += i;
+    }
+    for (int i = 0; i < 1024; i += 3) {
+        if (i % 5) sum += i;  /* already counted */
+    }
+    printf("%d\n", sum);
+    return 0;
 }
+
 
