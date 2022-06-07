@@ -13,14 +13,18 @@
 
 int main()
 {
-    int x = 3;
-    int y =5;
-    int n =1024;
-    int sum=0;
-    printf("enter the valeus of x,y and z\n");
-    scanf("%d%d%d",&x,&y,&n);
-    printf("entered   valeus of x=%d,y=%d and z=%d\n",x,y,n);
-    sum=x*((n/x)*((n/x)+1)/2)+y*((n/y)*((n/y)+1)/2)-x*y*(n/(x*y))*((n/(x*y))+1)/2;
-    printf("sum is %d\n",sum);
-    return 0;
+    int sum;
+    int i;
+    sum=0;
+       for(i=0;i<1000;++i)
+ {
+      if((i%3==0)||(i%5==0))
+     {
+       sum=sum+i;
+     }
+ }
+
+   printf("%d",sum);
+
 }
+
