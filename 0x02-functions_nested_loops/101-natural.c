@@ -13,16 +13,18 @@
 
 int main ( void ) {
 
-    int sum = 0;
+    long int x,total = 0;
 
-    for (int i = 0; i < 1024; i += 5) {
-        sum += i;
-    }
-    for (int i = 0; i < 1024; i += 3) {
-        if (i % 5) sum += i;  /* already counted */
-    }
-    printf("%d\n", sum);
-    return 0;
+for(x = 0; x < 1000; ++x)
+{
+    if(x % 3 == 0)
+        total = total + x;
+    else if(x % 5 == 0)
+        total = total + x;
 }
+
+printf("%ld", total);
+}
+
 
 
