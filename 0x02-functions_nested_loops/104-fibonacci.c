@@ -9,26 +9,17 @@
  * Return: Always 0 (Success)
 */
 
-
-int fib(int n)
+void main()
 {
+    int fib1 = 1, fib2 = 2, fib3, num, count = 0;
 
-   if (n <= 98)
-
-      return n;
-
-   return fib(n-1) + fib(n-2);
-}
- 
-
-int main ()
-{
-
-  int n = 9;
-
-  printf("%d", fib(n));
-
-  getchar();
-
-  return 0;
+    count = 98; /* fib1 and fib2 are already used */
+    while (count < num)
+    {
+        fib3 = fib1 + fib2;
+        count++;
+        printf("%d\n", fib3);
+        fib1 = fib2;
+        fib2 = fib3;
+   }
 }
