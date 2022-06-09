@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * _isdigit - checks for a digit.
+ * _isdigit - returns whether a ASCII code is a digit or not
+ *@c: character ASCII to check
  *
- * @c: value to be checked character ASCII to check
- * Return: 1 if c is digit and 0 otherwise.
+ * Return: 1 if it is uppercase and 0 if not
  */
 int _isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c > 47 && c < 58)
 		return (1);
-	        return (0);
+	else
+		return (0);
 }
- 
