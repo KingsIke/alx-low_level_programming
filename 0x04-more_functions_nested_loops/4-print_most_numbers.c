@@ -5,17 +5,17 @@
  *                 from 2 and 4 and you can
  *                 only use _putchar twice
  * Return: Always 0 (Success)
-*/
+*/ 
 
 void print_most_numbers(void)
 {
-	int num;
+	int c = 48;
 
-	for (num = 0; num <= 9; ++num)
+	while (c < 58)
 	{
-		if (num == 2 || num == 4)
-			continue;
-		_putchar(num + 48);
+		if (!(c == '2' || c == '4'))
+			_putchar(c);
+		c++;
 	}
 	_putchar('\n');
 }
