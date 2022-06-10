@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 
 /**
  * print_square - print a square using the character #
@@ -25,4 +25,3 @@ void print_square(int size)
 	else
 		_putchar('\n');
 }
-
