@@ -5,7 +5,7 @@
  * man isupper to learn more.
  * @c: character
  * Return: 1 if c is uppercase and 0 otherwise.
- */
+*/
 
 int _isupper(int c)
 {
