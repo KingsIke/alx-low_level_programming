@@ -1,29 +1,32 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
- * _sqrt - finds the square root
+ * main - prints the largest prime factorial of 612852475143
  *
- * @x: input number
- *
- * Return: square root of x
- *
-*/
-
+ * Return: 0
+ */
 int main(void)
 {
-	long num = 612852475143;
-	long divisor = 2;
-	long larg_prim = 0;
+    long int max = -1, n = 612852475143;
+    int i = 3;
 
-	while (num != 1)
-	{
-		if (num % divisor == 0)
-		{
-			num = num / divisor;
-			larg_prim = divisor;
-		}
-		divisor += 1;
-	}
-	printf("%ld\n", larg_prim);
-	return (0);
+    while (n % 2 == 0)
+    {
+        max = 2;
+        n /= 2;
+    }
+    while (i <= sqrt(n))
+    {
+        while (n % i == 0)
+        {
+            max = i;
+            n = n / i;
+        }
+        i += 2;
+    }
+    if (n > 2)
+        max = n;
+    printf("%ld\n", max);
+    return (0);
 }
