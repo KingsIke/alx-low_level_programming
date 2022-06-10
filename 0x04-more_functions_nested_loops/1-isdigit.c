@@ -1,16 +1,17 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _isdigit - returns whether a ASCII code is a digit or not
- *@c: character ASCII to check
- *
- * Return: 1 if it is uppercase and 0 if not
+ * _isdigit - function that checks for a digit (0 through 9).
+ * @c: input value to check.
+ * Return: int.
  */
+
 int _isdigit(int c)
 {
-	if (c > 47 && c < 58)
+	if (c >= 48 && c <= 57)
+	{
 		return (1);
+	}
 	else
 		return (0);
 }
