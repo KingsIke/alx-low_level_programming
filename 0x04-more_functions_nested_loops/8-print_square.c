@@ -2,10 +2,9 @@
 
 /**
  * print_square - print a square using the character #
- *
+ * 
  * @size: is the size of the square
- * Return: a square made of '#'
- * Return: Always 0 (Success)
+ * Return: Always 0 (Success) a square made of '#'
 */
 
 void print_square(int size)
