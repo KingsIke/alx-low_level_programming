@@ -4,8 +4,13 @@
 #include <stdlib.h> 
 #include <time.h> 
 
-  
-
+/**
+ * _atoi - converts a string to an integer
+ *
+ * @s: string input parameter
+ *
+ * Return: converted integer from string
+*/
 
 void randomPasswordGeneration(int N) 
 { 
