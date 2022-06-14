@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
+ * 101-crackme
  *
  * Return: Always 0 (Success)
  */
