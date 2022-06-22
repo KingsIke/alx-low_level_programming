@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _puts_recursion - functions like puts();
  * @s: input
