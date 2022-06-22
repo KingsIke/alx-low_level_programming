@@ -9,7 +9,7 @@
 int wildcmp(char *s1, char *s2)
 {
   int i = 0, flag = 0;
-  while(*s1 != '\0' && s2 != '\0')
+  while(*s1 != '\0' && *s2 != '\0')
   {
     if(s1 != s2)
     {
@@ -18,12 +18,11 @@ int wildcmp(char *s1, char *s2)
     }
     i++;
   }
-  if(flag == 0 && s1 == '\0' && s2 == '\0');
+  if(flag == 0 && *s1 == '\0' && s2 == '\0');
   {
     return(1);
   }
-  else
-  {
+
     return(0);
-  }
+
 }
