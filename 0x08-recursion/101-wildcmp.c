@@ -18,7 +18,7 @@ int wildcmp(char *s1, char *s2)
     }
     i++;
   }
-  if(flag == 0 && *s1 == '\0' && s2 == '\0')
+  if(flag == 0 && *s1 == '\0' && *s2 == '\0')
   {
     return(1);
   }
