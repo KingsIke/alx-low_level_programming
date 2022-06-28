@@ -1,92 +1,51 @@
 #include "main.h"
 #include <stdlib.h>
-int findsize(char *s);
-int findletterslength(char *s, int index);
+
 /**
- * strtow - function that splits string into words
- * @str: the string to be splitted
- *
- * Return: array of words
- **/
-char **strtow(char *str)
+  *argstostr - concatenates all arguments of the program.
+  *@ac: argument count.
+  *@av: pointer to array of size ac.
+  *Return: NULL if ac == 0 or av == null, Pointer to new string.
+  *NULL on fail.
+  */
+char *argstostr(int ac, char **av)
 {
-char **newarray;
-int i, j, k, size, wordlen, index;
+	int i, j, k, size;
+	char *arg;
 
-index = 0;
-if (str == NULL || str[0] == '\0')
-return (NULL);
-size = findsize(str);
-if (size == 0)
-return (NULL);
-newarray = malloc((size + 1) * sizeof(char *));
-if (newarray == NULL)
-return (NULL);
-
-for (i = 0; i < size; i++)
-{
-while (str[index] == ' ' && str[index])
-index++;
-wordlen = findletterslength(str, index);
-newarray[i] = malloc((wordlen + 1) * sizeof(char));
-if (newarray[i] == NULL)
-{
-for (j = 0 ; j <= i; j++)
-free(newarray[j]);
-free(newarray);
-return (NULL);
-}
-for (k = 0; k < wordlen; k++)
-{
-newarray[i][k] = str[index];
-index++;
-}
-newarray[i][k] = '\0';
-}
-newarray[i] = NULL;
-return (newarray);
-}
-/**
- * findletterslength -  find the length of a single word
- * @s: the given string
- * @index: the start index of the word
- *
- * Return: the length of a word
- **/
-int findletterslength(char *s, int index)
-{
-int wordlen;
-
-wordlen = 0;
-while (s[index] && s[index] != '\0' && s[index] != ' ')
-{
-wordlen++;
-index++;
-}
-return (wordlen);
-}
-/**
- * findsize - function this is used to find a size of a string
- * @s: the given string
- *
- * Return: the size of the string
- **/
-int findsize(char *s)
-{
-int size = 0;
-int index = 0;
-
-while (s[index])
-{
-if (s[index] != '\0' && s[index] != ' ')
-{
-size++;
-index += findletterslength(s, index);
-}
-else
-{
-index++;
-}
-}
-return (size);
+	size = 0;
+	k = 0;
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	i = 0;
+	while (i < ac)
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			size++;
+			j++;
+		}
+		size++;
+		i++;
+	}
+	arg = malloc((sizeof(char) * size) + 1);
+	if (arg == NULL)
+		return (NULL);
+	i = 0;
+	while (i < ac)
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			arg[k] = av[i][j];
+			j++;
+			k++;
+		}
+		arg[k] = '\n';
+		k++;
+		i++;
+	}
+	arg[k] = '\0';
+	return (arg);
 }
