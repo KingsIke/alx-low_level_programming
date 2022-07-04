@@ -3,8 +3,7 @@
 #include "dog.h"
 
 /**
-  *struct dog
-  * init_dog(struct dog *d, char *name, float age, char *owner).
+  *print_dog - prints a struct dog.
   *@d: pointer to struct.
   *
   *Return: void.
