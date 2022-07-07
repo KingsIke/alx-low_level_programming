@@ -4,7 +4,6 @@
  * sum_them_all(const unsigned int n, ...)
  *
  * @n: number of arguments
- * n == 0
  * Return: integer result or 0 if n == 0
  */
 
